@@ -1,11 +1,8 @@
 # Project Title
 
-In this project one can display different charts using dynamic data from mongodb as well mongoose in nodejs
-![image](https://user-images.githubusercontent.com/9768977/43562729-4935f748-9616-11e8-8e16-586947f0af5a.png)
-![image](https://user-images.githubusercontent.com/9768977/43562737-52b715c2-9616-11e8-983a-c83a1637405d.png)
-![image](https://user-images.githubusercontent.com/9768977/43562745-59bead30-9616-11e8-9fd0-b98022798c32.png)
-![image](https://user-images.githubusercontent.com/9768977/43562750-5d71ce44-9616-11e8-9268-9a9ca1e15e25.png)
-![image](https://user-images.githubusercontent.com/9768977/43562752-6103c4d6-9616-11e8-9a82-5c6b9b599bfb.png)
+# Screenshot
+![](src/assets/images/crm.png)
+
 ## Getting Started
 ```
 # The easiest way to get started is to clone the repository:
@@ -30,7 +27,8 @@ you need to install following software
 1)	Nodejs https://nodejs.org/en/download/
 2)	Express setup in nodejs application using pug template
 3)	Mongodb
-4)	Mongoose	
+4)	Mongoose
+5)  Angular 8	
 
 ### Project Structure
 

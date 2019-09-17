@@ -11,6 +11,7 @@ import { CoreModule } from './@core/core.module';
 import { ThemeModule } from './@theme/theme.module';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app-routing.module';
+import { NbPasswordAuthStrategy, NbAuthModule } from '@nebular/auth';
 import {
   NbChatModule,
   NbDatepickerModule,
@@ -30,6 +31,15 @@ import {
     AppRoutingModule,
 
     ThemeModule.forRoot(),
+
+    NbAuthModule.forRoot({
+      strategies: [
+        NbPasswordAuthStrategy.setup({
+          name: 'email',
+        }),
+      ],
+      forms: {},
+    }), 
 
     NbSidebarModule.forRoot(),
     NbMenuModule.forRoot(),

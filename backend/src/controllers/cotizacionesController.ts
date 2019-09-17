@@ -17,25 +17,25 @@ class CotizacionesController {
         if (cotizaciones.length > 0) {
             return res.json(cotizaciones[0]);
         }
-        res.status(404).json({ text: "The Cotización doesn't exits" });
+        res.status(404).json({ text: "Cotización no encontrada, por favor verifique" });
     }
 
     public async create(req: Request, res: Response): Promise<void> {
         const result = await pool.query('INSERT INTO ptblcotización set ?', [req.body]);
-        res.json({ message: 'Cotizacion Saved' });
+        res.json({ message: 'La Cotización fué guardada exitosamente!' });
     }
 
     public async update(req: Request, res: Response): Promise<void> {
         const { id } = req.params;
         const oldGame = req.body;
         await pool.query('UPDATE ptblcotización set ? WHERE cot = ?', [req.body, id]);
-        res.json({ message: "The cotizacion was Updated" });
+        res.json({ message: "Cotización Actualizada con Exito!" });
     }
 
     public async delete(req: Request, res: Response): Promise<void> {
         const { id } = req.params;
         await pool.query('DELETE FROM ptblcotización WHERE cot = ?', [id]);
-        res.json({ message: "The cotizacion was deleted" });
+        res.json({ message: "Cotización Eliminada Exitosamente! " });
     }
 }
 
